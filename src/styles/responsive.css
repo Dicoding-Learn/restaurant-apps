@@ -29,6 +29,11 @@
         width: 100%;
         text-align: left;
     }
+
+    .post-item-date {
+        min-width: 44px;
+        min-height: 44px;
+    }
 }
 
 @media screen and (min-width: 455px) {

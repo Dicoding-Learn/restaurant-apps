@@ -17,6 +17,21 @@ body {
     color: #424242;
 }
 
+/* Skip content */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #26d0c9;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+ }
+
+ .skip-link:focus {
+    top: 0;
+ }
+
 /*
  * Header
  *
@@ -39,17 +54,22 @@ body {
     font-size: 4em;
     margin: 0.5em 0.25em;
     display: inline-block;
-    color: #212121;
+    color: #26d0c9;
 }
 
 .header-menu {
     font-size: 32px;
-    margin: 10px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
     display: block;
-    width: 30px;
+    text-decoration: none;
 }
 
-
+#menu {
+    min-width: 44px;
+    min-height: 44px;
+}
 /*
  * Top level navigation
  */
@@ -84,8 +104,8 @@ body {
 }
 
 .nav a:hover {
-    text-decoration: underline;
-    color: #000;
+    text-decoration: none;
+    color: red;
 }
 
 
@@ -99,9 +119,9 @@ body {
     min-height: 380px;
     width: 100%;
     text-align: center;
-    background-image: url("https://images.unsplash.com/photo-1525648199074-cee30ba79a4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-image: url("/images/heros/hero-image_2.jpg");
     background-position: center;
-    background-color: green;
+    background-color: #26d0c9;
 }
 
 .hero-inner {
@@ -187,6 +207,8 @@ main {
     border-radius: 5px;
     background-color: #26d0c9;
     transition: opacity 0.3s;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .headline-button:hover {
@@ -244,7 +266,7 @@ main {
 }
 
 .post-item-date {
-    font-size: 10px;
+    font-size: 16px;
     text-transform: uppercase;
     color: #999;
 }
@@ -252,12 +274,13 @@ main {
 .post-item-date-author {
     color: red;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 2.3em;
 }
 
 .post-item-title {
     font-weight: 500;
     font-size: 16px;
-    margin-top: 16px;
     transition: 0.3s opacity;
 }
 
@@ -268,6 +291,7 @@ main {
 .post-item-title a {
     text-decoration: none;
     color: inherit;
+    font-size: 37px;
 }
 
 .post-item-description {
@@ -287,20 +311,9 @@ footer {
     text-align: center;
 }
 
-footer ul {
-    margin: 0 auto;
-    display: inline-block;
-}
-
-footer li {
-    display: inline-block;
-    margin: 0 1em;
+footer p {
+    font-weight: 500;
     font-size: 16px;
-}
-
-footer a {
-    display: inline-block;
-    padding: 1.3em;
-    text-decoration: none;
-    color: #fff
+    color: #fff;
+    padding: 1em;
 }
