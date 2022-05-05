@@ -105,7 +105,7 @@ body {
 
 .nav a:hover {
     text-decoration: none;
-    color: red;
+    color: #26d0c9;
 }
 
 
@@ -269,10 +269,11 @@ main {
     font-size: 16px;
     text-transform: uppercase;
     color: #999;
+    margin-bottom: 16px;
 }
 
 .post-item-date-author {
-    color: red;
+    color: #26d0c9;
     text-decoration: none;
     font-weight: bold;
 }
@@ -290,7 +291,11 @@ main {
 .post-item-title a {
     text-decoration: none;
     color: inherit;
-    font-size: 37px;
+}
+
+.post-item-title a:hover {
+    text-decoration: none;
+    color: #26d0c9;
 }
 
 .post-item-description {
