@@ -1,114 +1,36 @@
-.posts {
-    display: grid;
-    grid-row-gap: 16px;
-}
+/* Medium devices (landscape tablets, 768px and up) */
 
-@media screen and (max-width: 499px) {
-    .nav {
-        z-index: 10;
-        background-color: #fff;
-        width: 300px;
-        position: absolute;
-
-        /* This trasform moves the drawer off canvas. */
-        -webkit-transform: translate(-300px, 0);
-        transform: translate(-300px, 0);
-
-        /* Optionally, we animate the drawer. */
-        transition: transform 0.3s ease;
-    }
-
-    .open {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-
-    .nav-item {
-        display: list-item;
-        border-bottom: 1px solid #E0E0E0;
-        width: 100%;
-        text-align: left;
-    }
-
-    .post-item-date {
-        min-width: 44px;
-        min-height: 44px;
-    }
-}
-
-@media screen and (min-width: 455px) {
-    .headline-content {
-        padding: 16px 16px;
-    }
-
-    .headline-title {
-        font-size: 28px;
-    }
-
-    .headline-description {
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 500px) {
-    .header-menu {
+@media only screen and (min-width: 768px) {
+    #menu-button, #close-button {
         display: none;
     }
-}
-
-@media screen and (min-width: 650px) {
-    .headline-content {
-        margin: 0 auto;
-        max-width: 650px;
+    #nav-item .nav-list {
+        display: block;
+    }
+    #sidebar {
+        display: none;
     }
 
-    .post-item-content {
-        padding: 16px 32px 32px 32px;
-    }
-
-    .post-item-title {
-        font-size: 18px;
-    }
-
-    .post-item-description {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 700px) {
-    .posts {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 10px;
-        grid-row-gap: 16px;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .nav-list {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .headline {
-        display: grid;
+    .detail-review,
+    .menus,
+    .post-list {
         grid-template-columns: 1fr 1fr;
     }
+}
 
-    .headline-content {
-        padding: 16px 32px;
-    }
+/* Large devices (laptops/desktops, 992px and up) */
 
-    .posts {
-        display: grid;
+@media only screen and (min-width: 992px) {
+    .detail-review,
+    .post-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-@media screen and (min-width: 1200px) {
-    main {
+    .container {
         max-width: 1200px;
+        margin: auto;
+    }
+
+    .post-detail .post-thumbnail img {
+        height: 500px;
     }
 }
