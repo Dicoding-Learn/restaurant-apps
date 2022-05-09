@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Merriweather", serif;
+}
+
+/* genaral */
+
+a {
+  text-decoration: none;
+  line-height: 44px;
+}
+
+a, button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.container {
+  padding: 1rem;
+}
+
+#loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 5rem;
+  height: 5rem;
+  margin: 5rem 0;
+  border-radius: 50%;
+  border: 16px solid #8e8e8e;
+  border-top: 16px solid #26d0c9;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* SkipLink */
+
+.skip-link {
+  position: absolute;
+  padding: 8px;
+  background-color: #ff0000;
+  color: white;
+  top: -60px;
+  left: 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* header */
+
+header {
+  box-shadow: 0px 1px 0px 0px #00000055;
+}
+
+/* NavBar */
+
+#nav-item {
+  display: flex;
+  font-family: "Merriweather", serif;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-item .nav-item-menu {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #26d0c9;
+}
+
+#nav-item .nav-list {
+  display: none;
+}
+
+.nav-list .nav-list-item {
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: #8e8e8e;
+}
+
+.nav-list .nav-list-item:hover {
+  color: #26d0c9;
+}
+
+/* Sidebar */
+
+#sidebar .nav-list {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: white;
+  box-shadow: 1px 0px 0px #00000055;
+  padding-top: 5%;
+  transition: 0.5s;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+#sidebar .nav-list .nav-list-item {
+  display: block;
+  transition: 0.3s;
+}
+
+#menu-button, #close-button {
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 2rem;
+  text-align: center;
+  background: none;
+  color: #8e8e8e;
+  border: none;
+}
+
+#close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+#sidebar .open {
+  width: 70%;
+}
+
+/* Hero */
+
+#hero-item {
+  display: grid;
+  width: 100%;
+  min-height: 380px;
+  background: linear-gradient(0deg, rgb(1 0 0 / 50%), rgb(1 0 0 / 50%)), url(../public/images/heros/hero-image_2.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#hero-item .hero-content {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+#hero-item .hero-content .hero-welcome {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+#hero-item .hero-content .hero-title {
+  font-size: 60px;
+  font-family: initial;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+#hero-item .hero-content .hero-tag {
+  font-size: 25px;
+  font-family: initial;
+  color: white;
+  margin: 0;
+}
+
+/* MainContent */
+
+#main-content .content-title {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  margin-bottom: 2.5rem;
+  color: #8e8e8e;
+}
+
+/* post item */
+
+.post-item .post-title {
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+}
+
+.post-item .post-title a {
+  color: #26d0c9;
+  display: block;
+}
+
+.post-item .post-title a:hover {
+  color: #8e8e8e;
+}
+
+.post-item .post-header {
+  display: flex;
+  font-weight: bold;
+  color: #8e8e8e;
+  justify-content: space-between;
+}
+
+.post-item .post-header i {
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  margin-right: .25rem;
+  text-align: center;
+}
+
+.post-item .post-header .fa-map-marker-alt {
+  color: #ff0000;
+}
+
+.post-item .post-header .fa-star {
+  color: #ffd700;
+}
+
+/* list restaurant */
+
+.detail-review, .menus, .post-list {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.post-thumbnail img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.post-list .post-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 0rem 0rem 2rem;
+}
+
+.post-list .post-item .post-title {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.post-list .post-item .post-description {
+  margin: 0px 0px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* Detail Restaurant */
+
+.restaurant .post-thumbnail img {
+  border-radius: 10px;
+}
+
+.restaurant .post-item .post-title {
+  font-size: 2rem;
+}
+
+.restaurant .post-item .post-description {
+  text-align: justify;
+}
+
+.detail-review .detail-review-item {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px #00000055;
+}
+
+.detail-review-item .review-header {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.detail-review-item .review-header i {
+  margin-right: .5rem;
+  font-size: 2rem;
+  color: #8e8e8e;
+}
+
+.detail-review-item .review-header .review-name {
+  font-weight: bold;
+}
+
+.detail-review-item .review-header .review-date {
+  font-size: 13px;
+}
+
+.like {
+  display: flex;
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  font-size: 18px;
+  bottom: 16px;
+  right: 16px;
+  color: white;
+  background-color: #ff0000;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  padding: 1.5rem;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px -1px 0px 0px #00000055;
+  background-color: #26d0c9;
+  color: white;
+}
