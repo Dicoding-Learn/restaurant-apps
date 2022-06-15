@@ -27,11 +27,11 @@ const Home = {
 
   async afterRender() {
     const loading = document.querySelector('#loading');
+    const restaurantsContainer = document.querySelector('#post-list');
     loading.innerHTML = '<div class="loader"></div>';
 
     try {
       const restaurants = await RestaurantResource.listRestaurants();
-      const restaurantsContainer = document.querySelector('#post-list');
       restaurants.forEach((Restaurant) => {
         restaurantsContainer.innerHTML
           += createRestaurantItemTemplate(Restaurant);
