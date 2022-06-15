@@ -6,7 +6,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <div class="post-detail">
     <div class="post-content">
       <div class="post-thumbnail">
-        <img src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" 
+        <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" 
           alt="Thumbnail ${restaurant.name}">
       </div>
       <div class="post-header">
@@ -63,7 +63,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <article class="post-item">
       <div class="post-thumbnail">
-          <img src="${CONFIG.BASE_IMAGE_URL}small/${restaurant.pictureId}" 
+          <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL}small/${restaurant.pictureId}" 
             alt="Thumbnail ${restaurant.name}">
       </div>
       <div class="post-content container">
@@ -82,13 +82,13 @@ const createRestaurantItemTemplate = (restaurant) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="far fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fas fa-heart" aria-hidden="true"></i>
   </button>
 `;

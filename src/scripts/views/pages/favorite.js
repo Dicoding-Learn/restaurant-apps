@@ -17,11 +17,11 @@ const Favorite = {
 
   async afterRender() {
     const loading = document.querySelector('#loading');
+    const restaurantsContainer = document.querySelector('#restaurants');
     loading.innerHTML = '<div class="loader"></div>';
 
     try {
       const restaurants = await restoKuIdb.getAllRestaurants();
-      const restaurantsContainer = document.querySelector('#restaurants');
 
       if (restaurants.length === 0) {
         restaurantsContainer.innerHTML = `

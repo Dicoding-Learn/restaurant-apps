@@ -165,7 +165,7 @@ header {
   display: grid;
   width: 100%;
   min-height: 380px;
-  background: linear-gradient(0deg, rgb(1 0 0 / 50%), rgb(1 0 0 / 50%)), url(../public/images/heros/hero-image_2.jpg) center no-repeat;
+  background: url(/dist/images/heros/hero-image_2-small.jpg) center no-repeat;
   background-size: cover;
   position: relative;
 }

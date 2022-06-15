@@ -25,6 +25,7 @@
     .post-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
     .container {
         max-width: 1200px;
         margin: auto;
@@ -32,5 +33,17 @@
 
     .post-detail .post-thumbnail img {
         height: 500px;
+    }
+
+    #hero-item {
+        background: url(/dist/images/heros/hero-image_2-large.jpg) center no-repeat;
+        background-image: -webkit-image-set(
+            url(/dist/images/heros/hero-image_2-small.jpg) 1x,
+            url(/dist/images/heros/hero-image_2-large.jpg) 2x,
+        );
+        background-image: image-set(
+            url(/dist/images/heros/hero-image_2-small.jpg) 1x,
+            url(/dist/images/heros/hero-image_2-large.jpg) 2x,
+        );
     }
 }
